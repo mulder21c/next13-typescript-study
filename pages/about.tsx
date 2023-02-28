@@ -1,3 +1,9 @@
+import { Checks } from "@/components/inputs/inputCheck";
+
 export default function About() {
-  return <div>About</div>;
+  return (
+    <div>
+      <Checks />
+    </div>
+  );
 }
