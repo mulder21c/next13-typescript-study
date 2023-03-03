@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, auto));
+  gap: 20px;
+  .item {
+    display: grid;
+    place-content: center center;
+    border: 1px solid red;
+  }
+  .title {
+    display: block;
+    word-break: break-all;
+  }
+  .name {
+    display: block;
+    word-break: break-all;
+  }
+}

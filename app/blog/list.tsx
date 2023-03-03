@@ -1,6 +1,7 @@
 "use client";
 
 import type { NextPage } from "next";
+import Link from "next/link";
 interface BlogData {
   createdAt: string;
   name: string;
@@ -22,11 +23,18 @@ const List: NextPage<HomeProps> = ({ recentPosts }) => {
       <ul className="blog__list">
         {recentPosts.map((post) => (
           <li key={post.id} className="item">
-            <div className="img">
-              <img src={post.avatar} alt={post.name} width={128} height={128} />
-            </div>
-            <strong className="title">{post.title}</strong>
-            <span className="name">{post.name}</span>
+            <Link href={`/blog/${post.id}`}>
+              <div className="img">
+                <img
+                  src={post.avatar}
+                  alt={post.name}
+                  width={128}
+                  height={128}
+                />
+              </div>
+              <strong className="title">{post.title}</strong>
+              <span className="name">{post.name}</span>
+            </Link>
           </li>
         ))}
       </ul>
