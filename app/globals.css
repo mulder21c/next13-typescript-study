@@ -110,3 +110,23 @@ a {
   margin: 0;
   padding: 0;
 }
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+.blog__list .title {
+  display: block;
+}
+.blog__list .name {
+  display: block;
+}
+
+.blog__list li {
+  width: 150px;
+}
