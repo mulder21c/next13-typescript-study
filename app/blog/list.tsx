@@ -1,17 +1,18 @@
-"use client";
+'use client'
 
-import type { NextPage } from "next";
-import Link from "next/link";
+import type { NextPage } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 interface BlogData {
-  createdAt: string;
-  name: string;
-  avatar: string;
-  title: number;
-  id: string;
+  createdAt: string
+  name: string
+  avatar: string
+  title: number
+  id: string
 }
 
 interface HomeProps {
-  recentPosts: BlogData[];
+  recentPosts: BlogData[]
 }
 
 // This is a Client Component. It receives data as props and
@@ -25,12 +26,7 @@ const List: NextPage<HomeProps> = ({ recentPosts }) => {
           <li key={post.id} className="item">
             <Link href={`/blog/${post.id}`}>
               <div className="img">
-                <img
-                  src={post.avatar}
-                  alt={post.name}
-                  width={128}
-                  height={128}
-                />
+                <Image src={post.avatar} alt={post.name} width={128} height={128} />
               </div>
               <strong className="title">{post.title}</strong>
               <span className="name">{post.name}</span>
@@ -39,7 +35,7 @@ const List: NextPage<HomeProps> = ({ recentPosts }) => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default List;
+export default List
