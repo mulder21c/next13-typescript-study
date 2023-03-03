@@ -118,15 +118,17 @@ ol {
 
 .blog__list {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(5, minmax(150px, auto));
+  row-gap: 20px;
+  place-items: center start;
+}
+.blog__list .item {
+  border: 1px solid red;
+  place-items: center start;
 }
 .blog__list .title {
   display: block;
 }
 .blog__list .name {
   display: block;
-}
-
-.blog__list li {
-  width: 150px;
 }

@@ -21,7 +21,7 @@ const List: NextPage<HomeProps> = ({ recentPosts }) => {
     <div className="blog__container">
       <ul className="blog__list">
         {recentPosts.map((post) => (
-          <li key={post.id}>
+          <li key={post.id} className="item">
             <div className="img">
               <img src={post.avatar} alt={post.name} width={128} height={128} />
             </div>
